@@ -16,6 +16,22 @@ function mergeAlternately(word1: string, word2: string): string {
   return placeholder;
 }
 
+// function reverseWords(s: string): string {
+//   let newString = "";
+
+//   const temp = s.split(" ");
+//   console.log(temp);
+//   for (let i = temp.length - 1; i >= 0; i--) {
+//     if (temp[i] === "") continue;
+//     console.log(temp[i - 1]);
+//     newString += `${temp[i]}${
+//       i !== 0 && (temp[i - 1] !== "" || temp[i - 1] !== undefined) ? " " : ""
+//     }`;
+//   }
+
+//   return newString;
+// }
+
 // You are given two strings word1 and word2. Merge the strings by adding letters in alternating order, starting with word1. If a string is longer than the other, append the additional letters onto the end of the merged string.
 
 // Return the merged string.
