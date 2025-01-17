@@ -1,9 +1,5 @@
 class TreeNode {
-  val: string;
-  left: TreeNode | null;
-  right: TreeNode | null;
-
-  constructor(val: string) {
+  constructor(val) {
     this.val = val;
     this.left = null;
     this.right = null;
@@ -47,7 +43,7 @@ c.right = f;
 // };
 
 // Recursive
-const depthFirstValues = (root: TreeNode | null): string[] => {
+const depthFirstValues = (root) => {
   if (root === null) return [];
   const leftValues = depthFirstValues(root.left);
 
