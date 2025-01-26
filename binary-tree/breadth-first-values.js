@@ -24,7 +24,7 @@ c.right = f;
 //   b     c
 //  / \     \
 // d   e     f
-
+//[ 'a', 'b', 'c', 'd', 'e', 'f' ]
 const breadthFirstValues = (root) => {
   if (root === null) return [];
   const result = [];

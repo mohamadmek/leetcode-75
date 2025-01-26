@@ -24,6 +24,7 @@ c.right = f;
 //   b     c
 //  / \     \
 // d   e     f
+//[ 'a', 'b', 'd', 'e', 'c', 'f' ]
 
 // const depthFirstValues = (root: TreeNode | null): string[] => {
 //   if (root === null) return [];
@@ -49,6 +50,23 @@ const depthFirstValues = (root) => {
 
   const rightValues = depthFirstValues(root.right);
   return [root.val, ...leftValues, ...rightValues];
+};
+
+var leafSimilar = function (root1, root2) {
+  const dfs = (root, result) => {
+    if (root === null) return;
+    if (!root.left && !root.right) result.push(root.val);
+
+    dfs(root.left, result);
+    dfs(root.right, result);
+  };
+  const res1 = [];
+  const res2 = [];
+
+  dfs(root1, res1);
+  dfs(root2, res2);
+
+  return JSON.stringify(res1) == JSON.stringify(res2);
 };
 
 console.log(depthFirstValues(a));
